@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style_component/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="elemOne">
+        <h1 class="elemOne__number"><span class="elemOne__number_one">1</span><span class="elemOne__number_zero-one">0</span><span class="elemOne__number_zero-two">0</span></h1>
+        <h2 class="elemOne__text_big">DAYS</h2>
+        <h3 class="elemOne__text_small">css challenge</h3>
+    </div>
+
+    <div class="elemTwo">
+      
+        <div class="flex">
+            <div class="line three"></div>
+             <div class="line two"></div>
+             <div class="line one"></div>
+        </div>
+        <script>
+            const flex = document.querySelector('.flex');
+            let stage = 0;
+    
+            flex.addEventListener("click", function() {
+                if (stage === 0) {
+                    flex.classList.add('stage1');
+                    setTimeout(() => {
+                        flex.classList.add('stage2');
+                    }, 300);
+                    stage = 1;
+                } else {
+                    flex.classList.remove('stage1', 'stage2');
+                    stage = 0;
+                }
+            });
+          </script>
+        </div>
+    </div>
+
+
+</body>
+</html>

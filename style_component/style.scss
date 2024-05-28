@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    gap: 50px;
+}
+
+.elemOne {
+    width: 500px;
+    height: 500px;
+    background: #43389f;
+    background: linear-gradient(to top right, #43389f 0%, #4ec6ca 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+
+    &__number {
+
+        display: inline-block;
+        font-size: 150px;
+        font-weight: 900;
+
+        &_one {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            color: black;
+            transform: translateX(50%);
+        }
+
+        &_zero-one {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            color: rgb(123, 123, 123);
+        }
+
+        &_zero-two {
+            position: relative;
+            z-index: 3;
+            display: inline-block;
+            transform: translateX(-20%);
+            color: rgb(145, 145, 145);
+        }
+    }
+
+    &__text {
+        margin-top: 5px;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        &_big {
+            margin-top: 10px;
+            font-size: 82px;
+            line-height: 60px;
+            color: white;
+            margin-top: 6px;
+        }
+
+        &_small {
+            margin-top: 5px;
+            color: white;
+            font-size: 23px;
+            line-height: 20px;
+            letter-spacing: 0.04em;
+        }
+    }
+}
+
+.elemTwo{
+    width: 500px;
+    height: 500px;
+    background-color: #3FAF82;
+     display: flex;
+        align-items: center;
+        justify-content: center;
+ gap: 50px;
+} .container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+  .flex{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+
+  .line {
+    width: 80px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: black; 
+    transition: transform 3s, opacity 2s;
+}
+
+
+.flex.stage1 .three, .flex.stage2 .three {
+    transform: translateY(120px);
+}
+
+.flex.stage1 .one, .flex.stage2 .one {
+    transform: translateY(-120px);
+}
+
+.flex.stage2 .two {
+    transform: translateY(10px);
+    opacity: 0;
+}
+
+.flex.stage2 .three {
+    transform: translateY(40px) rotate(-45deg);
+}
+
+.flex.stage2 .one {
+    transform: translateY(-20px) rotate(45deg);
+}
