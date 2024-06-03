@@ -162,25 +162,7 @@ body {
   }
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-    border: 2px solid #753307;
-  }
-  30% {
-    transform: rotate(0deg);
-    border: 2px solid rgba(234, 134, 67, 0.3176470588);
-  }
-  50% {
-    border: 2px solid #753307;
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-    border: 2px solid rgba(234, 134, 67, 0.3176470588);
-  }
-}
-.elemFour__img_border:hover::before {
+.elemFour__img_border::before {
   position: absolute;
   width: 150px;
   height: 150px;
@@ -188,8 +170,29 @@ body {
   border-radius: 50%;
   content: "";
   border: 2px solid rgba(234, 134, 67, 0.3176470588);
-  transition: all 0.3s ease;
-  animation: rotate 10s linear infinite;
+  border-left: 2px solid transparent;
+  transition: all 1s ease;
+}
+
+.elemFour__img_border:hover::before {
+  transform: rotate(360deg);
+}
+
+.elemFour__img_border::after {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  margin: -12px;
+  border-radius: 50%;
+  content: "";
+  border: 2px solid rgba(118, 53, 4, 0.7843137255);
+  border-right: 2px solid transparent;
+  transition: all 1s ease;
+  left: 0;
+}
+
+.elemFour__img_border:hover::after {
+  transform: rotate(-360deg);
 }
 
 .elemFour {
@@ -202,6 +205,9 @@ body {
   border-radius: 50%;
   position: relative;
   z-index: 1;
+}
+.elemFour__img_border {
+  position: relative;
 }
 .elemFour__content {
   border-radius: 10px 10px 10px 10px;
